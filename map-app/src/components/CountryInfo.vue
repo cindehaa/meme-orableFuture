@@ -1,4 +1,5 @@
 <template>
-    <div id="map" class="map"></div>
-    <div id="info">&nbsp;</div>
+    <div class="card-container">
+        
+    </div>
 </template>
