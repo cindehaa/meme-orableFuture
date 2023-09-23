@@ -1,25 +1,28 @@
 <template>
     <div class="map-container">
-      <div id="map" class="map"></div>
-      <div id="info">&nbsp;</div>
+        <div id="map" class="map"></div>
+        <div id="info">&nbsp;</div>
     </div>
     <div class="legend">
-      <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-  </template>
+
+    <CountryInfo v-if="showCountryInfo" :countryName="this.countryName" />
+
+</template>
   
-  <style>
-  .map-container {
+<style>
+.map-container {
     position: relative;
     height: 100vh;
-  }
-  
-  .map {
+}
+
+.map {
     width: 100%;
     height: 100vh;
-  }
-  
-  .legend {
+}
+
+.legend {
     width: 30%;
     height: 30px;
     background-color: #1a2b39;
@@ -27,16 +30,23 @@
     z-index: 99;
     bottom: 10px;
     left: 10px;
-  }
-  
-  .bar {
+}
+
+.bar {
     width: 100%;
     height: 100%;
     min-height: 20px;
     background-image: linear-gradient(to right, red, yellow);
     border-radius: 10px;
-  }
-  </style>
+}
+
+.country-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Set a higher z-index for CountryInfo */
+}
+</style>
 
 <script>
 import GeoJSON from 'ol/format/GeoJSON.js';
@@ -44,11 +54,20 @@ import Map from 'ol/Map.js';
 import VectorLayer from 'ol/layer/Vector.js';
 import VectorSource from 'ol/source/Vector.js';
 import View from 'ol/View.js';
+import CountryInfo from './CountryInfo.vue';
+
+let countryName = "";
 
 export default {
     name: 'MapContainer',
-    components: {},
+    components: {CountryInfo},
     props: {},
+    data() {
+        return {
+            showCountryInfo: false,
+            countryName: "",
+        }
+    },
     mounted() {
 
         const vectorLayer = new VectorLayer({
@@ -90,6 +109,7 @@ export default {
             const info = document.getElementById('info');
             if (feature) {
                 info.innerHTML = feature.get('ADMIN') || '&nbsp;';
+                countryName = feature.get('ADMIN')
             } else {
                 info.innerHTML = '&nbsp;';
             }
@@ -112,9 +132,21 @@ export default {
             displayFeatureInfo(pixel);
         });
 
-        map.on('click', function (evt) {
-            displayFeatureInfo(evt.pixel);
+        map.on('click', (evt) => {
+            this.countryName = countryName;
+            this.showCountryInfo = true;
         });
-    }
+    },
+    methods: {
+        countryClicked() {
+            this.$router.push({
+                name: 'countryInfo',
+                params: {
+                    countryName: countryName
+                }
+            });
+            console.log(countryName)
+        }
+    },
 }
 </script>
