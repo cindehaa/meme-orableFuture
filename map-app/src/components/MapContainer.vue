@@ -54,7 +54,7 @@ export default {
         const vectorLayer = new VectorLayer({
             background: 'transparent',
             source: new VectorSource({
-                url: "/data/countries.geojson",
+                url: "https://new-data.greenglobe.pages.dev/data/countries.geojson",
                 format: new GeoJSON(),
             }),
             style: {
