@@ -1,5 +1,6 @@
 <script setup>
 import MapContainer from '../components/MapContainer.vue'
+import PercentageBar from '../components/PercentageBar.vue';
 </script>
 
 <template>

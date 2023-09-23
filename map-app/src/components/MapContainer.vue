@@ -1,6 +1,9 @@
 <template>
     <div id="map" class="map"></div>
     <div id="info">&nbsp;</div>
+    <main>
+        <PercentageBar />
+    </main>
 </template>
 
 <style>
@@ -16,10 +19,11 @@ import Map from 'ol/Map.js';
 import VectorLayer from 'ol/layer/Vector.js';
 import VectorSource from 'ol/source/Vector.js';
 import View from 'ol/View.js';
+import PercentageBar from './PercentageBar.vue';
 
 export default {
     name: 'MapContainer',
-    components: {},
+    components: { PercentageBar },
     props: {},
     mounted() {
 

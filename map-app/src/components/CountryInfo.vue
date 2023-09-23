@@ -1,0 +1,4 @@
+<template>
+    <div id="map" class="map"></div>
+    <div id="info">&nbsp;</div>
+</template>
