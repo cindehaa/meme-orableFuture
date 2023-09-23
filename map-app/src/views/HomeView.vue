@@ -3,7 +3,8 @@ import MapContainer from '../components/MapContainer.vue'
 </script>
 
 <template>
+  <h1>GreenGlobe Insights</h1>
   <main>
-    <MapContainer style="width: 50%; height: 50%; min-height: 50%; min-width: 50%;"/>
+    <MapContainer />
   </main>
 </template>

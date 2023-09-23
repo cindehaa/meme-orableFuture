@@ -1,42 +1,89 @@
 <template>
-  <div ref="map-root"
-       style="width: 100%; height: 100%">
-  </div>
+    <div id="map" class="map"></div>
+    <div id="info">&nbsp;</div>
 </template>
 
+<style>
+.map {
+    width: 100%;
+    height: 400px;
+}
+</style>
+
 <script>
-  import View from 'ol/View'
-  import Map from 'ol/Map'
-  import TileLayer from 'ol/layer/Tile'
-  import OSM from 'ol/source/OSM'
+import GeoJSON from 'ol/format/GeoJSON.js';
+import Map from 'ol/Map.js';
+import VectorLayer from 'ol/layer/Vector.js';
+import VectorSource from 'ol/source/Vector.js';
+import View from 'ol/View.js';
 
-  // importing the OpenLayers stylesheet is required for having
-  // good looking buttons!
-  import 'ol/ol.css'
-
-  export default {
+export default {
     name: 'MapContainer',
     components: {},
     props: {},
     mounted() {
-      // this is where we create the OpenLayers map
-      new Map({
-        // the map will be created using the 'map-root' ref
-        target: this.$refs['map-root'],
-        layers: [
-          // adding a background tiled layer
-          new TileLayer({
-            source: new OSM() // tiles are served by OpenStreetMap
-          }),
-        ],
 
-        // the map view will initially show the whole world
-        view: new View({
-          zoom: 0,
-          center: [0, 0],
-          constrainResolution: true
-        }),
-      })
-    },
-  }
+        const vectorLayer = new VectorLayer({
+            background: '#1a2b39',
+            source: new VectorSource({
+                url: "/data/countries.geojson",
+                format: new GeoJSON(),
+            }),
+            style: {
+                'fill-color': ['string', ['get', 'COLOR'], '#eee'],
+            },
+        });
+        const map = new Map({
+            layers: [vectorLayer],
+            target: 'map',
+            view: new View({
+                center: [0, 0],
+                zoom: 1,
+            }),
+        });
+        const featureOverlay = new VectorLayer({
+            source: new VectorSource(),
+            map: map,
+            style: {
+                'stroke-color': 'rgba(255, 255, 255, 0.7)',
+                'stroke-width': 2,
+            },
+        });
+
+        let highlight;
+        const displayFeatureInfo = function (pixel) {
+            const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+                return feature;
+            });
+
+            const info = document.getElementById('info');
+            if (feature) {
+                info.innerHTML = feature.get('ADMIN') || '&nbsp;';
+            } else {
+                info.innerHTML = '&nbsp;';
+            }
+
+            if (feature !== highlight) {
+                if (highlight) {
+                    featureOverlay.getSource().removeFeature(highlight);
+                }
+                if (feature) {
+                    featureOverlay.getSource().addFeature(feature);
+                }
+                highlight = feature;
+            }
+        };
+        map.on('pointermove', function (evt) {
+            if (evt.dragging) {
+                return;
+            }
+            const pixel = map.getEventPixel(evt.originalEvent);
+            displayFeatureInfo(pixel);
+        });
+
+        map.on('click', function (evt) {
+            displayFeatureInfo(evt.pixel);
+        });
+    }
+}
 </script>
