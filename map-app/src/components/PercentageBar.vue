@@ -7,26 +7,29 @@
 <style>
 .legend {
     width: 100%;
-    height: 30px;
+    height: 25px;
 
     /* change to background colour TBD*/
-    background-color: #fff;
+    background-color: #000;
 
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
 .bar {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, red , yellow);
+    width: 50%;
+    height: 25%;
+    background-image: linear-gradient(to right, #FF7A00, #02FFFF);
     position: relative;
-    border-radius: 10px;
+    border-radius: 75px;
+    opacity: 0.5;
 }
 
 .percentage-fill {
     width: 0%;
-    height: 100%;
-    background-color: #000;
+    height: 10%;
+    background-color: #fff;
     /* Color of the filled percentage */
 }
 </style>
