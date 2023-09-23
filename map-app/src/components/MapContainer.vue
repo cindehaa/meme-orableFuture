@@ -4,15 +4,30 @@
         <div id="info">&nbsp;</div>
     </div>
     <div class="legend">
-        <div class="bar"></div>
+      <div class="bar">
+        <span class="middle-line"></span>
+      </div>
+      <div class="numbers">
+        <p>0%</p>
+        <p>25%</p>
+        <p>50%</p>
+        <p>75%</p>
+        <p>100%</p>
+      </div>
     </div>
 
     <CountryInfo v-if="showCountryInfo" :countryName="this.countryName" />
 
 </template>
   
-<style>
-.map-container {
+  <style>
+    @font-face {
+    font-family: 'Nunito-Regular';
+    font-weight: 400;
+    src: local('Nunito-Regular'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+    }
+
+  .map-container {
     position: relative;
     height: 100vh;
 }
@@ -20,33 +35,68 @@
 .map {
     width: 100%;
     height: 100vh;
-}
-
-.legend {
-    width: 30%;
-    height: 30px;
-    background-color: #1a2b39;
+  }
+  
+  .legend {
+    width: 100%;
+    height: 25px;
     position: absolute;
     z-index: 99;
     bottom: 10px;
     left: 10px;
-}
 
-.bar {
-    width: 100%;
-    height: 100%;
-    min-height: 20px;
-    background-image: linear-gradient(to right, red, yellow);
-    border-radius: 10px;
-}
+    display: flex;   
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .bar {
+    width: 50%;
+    height: 25%;
+    min-height: 10px;
+    background-image: linear-gradient(to right, #FF7A00, #02FFFF);
+    position: relative;
+    border-radius: 75px;
+    opacity: 0.75;
+  }
 
-.country-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100; /* Set a higher z-index for CountryInfo */
-}
-</style>
+    .bar::before,
+    .bar::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: #1a2b39;
+    }
+
+    .bar::before {
+        left: 25%; /* first line */
+    }
+
+    .middle-line {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: #1a2b39; 
+        left:50%;
+    }
+
+    .bar::after {
+        left: 75%; /* third line */
+    }
+
+    .numbers {
+        width: 50%;
+        color: white;
+        font-family: "Nunito-Regular";
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  </style>
 
 <script>
 import GeoJSON from 'ol/format/GeoJSON.js';
@@ -95,7 +145,8 @@ export default {
             source: new VectorSource(),
             map: map,
             style: {
-                'stroke-color': 'rgba(255, 255, 255, 0.7)',
+                'stroke-color': 'rgba(112, 151, 117, 0.7)',
+                'fill-color': 'rgba(112, 151, 117, 0.7)',
                 'stroke-width': 2,
             },
         });
