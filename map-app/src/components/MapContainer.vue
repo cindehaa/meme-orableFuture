@@ -1,50 +1,42 @@
 <template>
     <div class="map-container">
-        <div id="map" class="map"></div>
-        <div id="info">&nbsp;</div>
-        <div class="legend">
-            <div class="bar"></div>
-        </div>
+      <div id="map" class="map"></div>
+      <div id="info">&nbsp;</div>
     </div>
-</template>
-
-<style>
-.map-container {
-    /* display: flex;
-    flex-direction: column; */
+    <div class="legend">
+      <div class="bar"></div>
+    </div>
+  </template>
+  
+  <style>
+  .map-container {
     position: relative;
     height: 100vh;
-}
-
-.map {
+  }
+  
+  .map {
     width: 100%;
     height: 100vh;
-    z-index: 1;
-}
-
-.legend {
+  }
+  
+  .legend {
     width: 30%;
     height: 30px;
     background-color: #1a2b39;
     position: absolute;
     z-index: 99;
-    bottom: 0; /* Place at the bottom of .legend */
-  left: 0; /* Place at the left of .legend */
-}
-
-.bar {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .bar {
     width: 100%;
     height: 100%;
     min-height: 20px;
     background-image: linear-gradient(to right, red, yellow);
-    position: absolute;
     border-radius: 10px;
-    z-index: 99;
-    bottom: 0; /* Place at the bottom of .legend */
-  left: 0; /* Place at the left of .legend */
-}
-
-</style>
+  }
+  </style>
 
 <script>
 import GeoJSON from 'ol/format/GeoJSON.js';
@@ -60,7 +52,7 @@ export default {
     mounted() {
 
         const vectorLayer = new VectorLayer({
-            background: '#1a2b39',
+            background: 'transparent',
             source: new VectorSource({
                 url: "/data/countries.geojson",
                 format: new GeoJSON(),
@@ -76,6 +68,9 @@ export default {
                 center: [0, 0],
                 zoom: 1,
             }),
+            style: {
+                'z-index': '1 !important',
+            }
         });
         const featureOverlay = new VectorLayer({
             source: new VectorSource(),
