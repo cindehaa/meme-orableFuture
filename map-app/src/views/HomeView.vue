@@ -1,11 +1,21 @@
 <script setup>
 import MapContainer from '../components/MapContainer.vue'
-import PercentageBar from '../components/PercentageBar.vue';
 </script>
 
 <template>
-  <h1>GreenGlobe Insights</h1>
-  <main>
-    <MapContainer />
-  </main>
+  <div class="container">
+    <h1>GreenGlobe Insights</h1>
+    <br>
+    <main>
+      <MapContainer />
+    </main>
+  </div>
 </template>
+
+<style>
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+</style>

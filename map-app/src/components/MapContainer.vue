@@ -1,15 +1,19 @@
 <template>
-    <div id="map" class="map"></div>
-    <div id="info">&nbsp;</div>
-    <main>
-        <PercentageBar />
-    </main>
+    <div class="map-container">
+        <div id="map" class="map"></div>
+        <div id="info">&nbsp;</div>
+        <main>
+            <PercentageBar />
+        </main>
+    </div>
 </template>
 
 <style>
+
 .map {
     width: 100%;
     height: 400px;
+    /* height: 100%; */
 }
 </style>
 
