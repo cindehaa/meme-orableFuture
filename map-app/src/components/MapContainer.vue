@@ -7,10 +7,23 @@
       <div class="bar">
         <span class="middle-line"></span>
       </div>
+      <div class="numbers">
+        <p>0%</p>
+        <p>25%</p>
+        <p>50%</p>
+        <p>75%</p>
+        <p>100%</p>
+      </div>
     </div>
   </template>
   
   <style>
+    @font-face {
+    font-family: 'Nunito-Regular';
+    font-weight: 400;
+    src: local('Nunito-Regular'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+    }
+
   .map-container {
     position: relative;
     height: 100vh;
@@ -30,17 +43,9 @@
     left: 10px;
 
     display: flex;   
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
-
-    /* width: 100%;
-    height: 25px;
-
-    background-color: #000;
-
-    display: flex;
-    justify-content: center;
-    position: relative; */
   }
   
   .bar {
@@ -59,7 +64,7 @@
         position: absolute;
         height: 100%;
         width: 2px;
-        background-color: #fff;
+        background-color: #1a2b39;
     }
 
     .bar::before {
@@ -71,12 +76,21 @@
         position: absolute;
         height: 100%;
         width: 2px;
-        background-color: #fff; 
+        background-color: #1a2b39; 
         left:50%;
     }
 
     .bar::after {
         left: 75%; /* third line */
+    }
+
+    .numbers {
+        width: 50%;
+        color: white;
+        font-family: "Nunito-Regular";
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
   </style>
