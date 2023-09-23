@@ -2,19 +2,48 @@
     <div class="map-container">
         <div id="map" class="map"></div>
         <div id="info">&nbsp;</div>
-        <main>
-            <PercentageBar />
-        </main>
+        <div class="legend">
+            <div class="bar"></div>
+        </div>
     </div>
 </template>
 
 <style>
+.map-container {
+    /* display: flex;
+    flex-direction: column; */
+    position: relative;
+    height: 100vh;
+}
 
 .map {
     width: 100%;
-    height: 400px;
-    /* height: 100%; */
+    height: 100vh;
+    z-index: 1;
 }
+
+.legend {
+    width: 30%;
+    height: 30px;
+    background-color: #1a2b39;
+    position: absolute;
+    z-index: 99;
+    bottom: 0; /* Place at the bottom of .legend */
+  left: 0; /* Place at the left of .legend */
+}
+
+.bar {
+    width: 100%;
+    height: 100%;
+    min-height: 20px;
+    background-image: linear-gradient(to right, red, yellow);
+    position: absolute;
+    border-radius: 10px;
+    z-index: 99;
+    bottom: 0; /* Place at the bottom of .legend */
+  left: 0; /* Place at the left of .legend */
+}
+
 </style>
 
 <script>
@@ -23,11 +52,10 @@ import Map from 'ol/Map.js';
 import VectorLayer from 'ol/layer/Vector.js';
 import VectorSource from 'ol/source/Vector.js';
 import View from 'ol/View.js';
-import PercentageBar from './PercentageBar.vue';
 
 export default {
     name: 'MapContainer',
-    components: { PercentageBar },
+    components: {},
     props: {},
     mounted() {
 
