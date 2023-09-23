@@ -123,23 +123,22 @@ export default {
         const vectorLayer = new VectorLayer({
             background: 'transparent',
             source: new VectorSource({
-                url: "/data/countries.geojson",
+                // url: "/data/countries.geojson",
+                url: "https://services7.arcgis.com/IyvyFk20mB7Wpc95/arcgis/rest/services/Sustainable_Development_Report_2023_(with_indicators)_/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson",
                 format: new GeoJSON(),
             }),
             style: {
                 'fill-color': ['string', ['get', 'COLOR'], '#eee'],
             },
         });
+        console.log(vectorLayer)
         const map = new Map({
             layers: [vectorLayer],
             target: 'map',
             view: new View({
                 center: [0, 0],
                 zoom: 1,
-            }),
-            style: {
-                'z-index': '1 !important',
-            }
+            })
         });
         const featureOverlay = new VectorLayer({
             source: new VectorSource(),
