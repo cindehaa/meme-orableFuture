@@ -86,7 +86,7 @@
     border-right: 20px solid transparent;
     border-top: 20px solid #A1CCA5;
     text-shadow: 2px 2px 4px #415D43;
-    margin-bottom: 2%;
+    margin-bottom: 7%;
     margin-left: -33%;
 }
 
