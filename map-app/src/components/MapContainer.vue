@@ -76,7 +76,7 @@
     font-family: "Nunito-SemiBold";
     color: #8FB996;
     text-shadow: 2px 2px 4px #415D43;
-    font-size: 100px;
+    font-size: 80px;
 }
 
 #arrow-down {
