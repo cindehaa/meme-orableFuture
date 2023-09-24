@@ -5,6 +5,9 @@ import MapContainer from '../components/MapContainer.vue'
 <template>
   <div class="container">
     <div class="header-container">
+      <img src="../images/top-right.png" class="top-right-image" />
+      <img src="../images/bottom-left.png" class="bottom-left-image" />
+
       <header class="centered-header">
         <h1 class="header">GreenGlobe Insights</h1>
       </header>
@@ -17,9 +20,9 @@ import MapContainer from '../components/MapContainer.vue'
 
 <style>
 @font-face {
-  font-family: 'Nunito-Regular';
+  font-family: 'Nunito-SemiBold';
   font-weight: 400;
-  src: local('Nunito-Regular'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+  src: local('Nunito-SemiBold'), url(../fonts/Nunito-SemiBold.ttf) format('truetype');
 }
 
 .header-container {
@@ -28,13 +31,36 @@ import MapContainer from '../components/MapContainer.vue'
   align-items: center;
   height: 15%;
   background-color: #24282A;
+  box-shadow: 25px 4px 6px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.top-right-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9%;
+}
+
+.bottom-left-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 9%;
 }
 
 .centered-header {
   text-align: center;
-  color: #fff;
-  font-family: "Nunito-Regular";
-  text-shadow: -2px -0.5px 3px #709775;
+}
+
+.header {
+  font-size: 48px;
+  color: transparent;
+  background: linear-gradient(to bottom, #fff, #709775);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Nunito-SemiBold";
+  /* text-shadow: -0.5px -0.5px 3px #709775; */
 }
 
 .container {
