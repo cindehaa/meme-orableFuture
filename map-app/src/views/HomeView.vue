@@ -27,7 +27,7 @@ import MapContainer from '../components/MapContainer.vue'
   justify-content: center;
   align-items: center;
   height: 15%;
-  background-color: #24282A;
+  background-color: rgb(36, 40, 42);
 }
 
 .centered-header {
