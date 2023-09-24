@@ -80,7 +80,7 @@ DevPost:
 * Skylar Ji: Graphic and UI/UX Designer, Full Stack
 
 ## Roadmap
-We'd like to continue working on our website, implementing features like a sliding bar for users to choose up to what year they'd like to predict a country to. 
+We'd like to continue working on our website, implementing features like a sliding bar for users to choose up to what year they'd like to predict a country for.  
 We'd like to also continue to improve to UI of the website, with features like a light-dark mode toggle.
 We believe that our website will be extremely useful in the real world, and we hope that our predictions and information can help alleviate the climate anxiety of individuals around the world.
 
