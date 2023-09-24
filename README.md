@@ -65,7 +65,7 @@ These sources for chosen for their comprehensiveness and credibility.
 ###### Programming Languages Used: JavaScript, Python, HTML, CSS
 
 ## How To Use
-Go to https://new-data.greenglobe.pages.dev/
+Go to https://greenglobe.tech/
 
 ## UI Blueprint
 Our inital vision for the website can be found [here](https://www.figma.com/file/Xc9SPOaidGRyENDfSi9dNs/World-Map-(Community)?type=design&node-id=0%3A1&mode=design&t=OfuiMUamE9dCG8vA-1).
