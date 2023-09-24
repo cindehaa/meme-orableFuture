@@ -85,7 +85,8 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #A1CCA5;
-    margin-bottom: 3%;
+    text-shadow: 2px 2px 4px #415D43;
+    margin-bottom: 2%;
     margin-left: -33%;
 }
 
@@ -258,8 +259,8 @@ export default {
             source: new VectorSource(),
             map: map,
             style: {
-                'stroke-color': 'rgba(112, 151, 117, 0.7)',
-                'fill-color': 'rgba(112, 151, 117, 0.7)',
+                'stroke-color': 'rgba(47, 18, 135, 0.5)',
+                'fill-color': 'rgba(132, 104, 217, 0.5)',
                 'stroke-width': 2,
             },
         });
@@ -276,7 +277,29 @@ export default {
             if (feature) {
                 info.innerHTML = feature.get('ADMIN') || '&nbsp;';
                 country_name.innerHTML = feature.get('ADMIN') || '&nbsp;';
-                sustain_arrow.style.marginLeft = "0%";
+                const countryName = feature.get('ISO_A3');
+
+                const sustainableFeature = sustainableCountries.getSource().getFeatures().find((feature) => {
+                    return feature.get('ID') === countryName;
+                });
+
+                if (sustainableFeature) {
+                    const overallScore = sustainableFeature.get('Overall_Score');
+                    const normalizedValue = (overallScore - 58) / (87 - 58);
+                    var sustain_value = (normalizedValue * 66) - 33;
+
+                    if (sustain_value < -33) {
+                        sustain_value = -33;
+                    }
+
+                    var percent = `${sustain_value}%`
+                    sustain_arrow.style.marginLeft = percent;
+                }
+
+                else {
+                    sustain_arrow.style.marginLeft = "0%";
+                }
+
             } else {
                 info.innerHTML = '&nbsp;';
                 country_name.innerHTML = '&nbsp;';
@@ -303,10 +326,6 @@ export default {
 
         map.on('click', function (evt) {
             displayFeatureInfo(evt.pixel);
-            const sustain_arrow = document.getElementById('arrow-down');
-            const sustain_value = Math.floor(Math.random() * (33 + 33 + 1)) - 33;
-            var percent = `${sustain_value}%`
-            sustain_arrow.style.marginLeft = percent;
         });
     },
     methods: {
