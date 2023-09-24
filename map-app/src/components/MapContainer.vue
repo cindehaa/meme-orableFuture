@@ -3,6 +3,10 @@
         <div id="map" class="map"></div>
         <div id="info">&nbsp;</div>
     </div>
+    <div class="country-info">
+        <div id="country-name">&nbsp;</div>
+        <div id="arrow-down"></div>
+    </div>
     <div class="legend">
         <div class="bar">
             <span class="middle-line"></span>
@@ -36,6 +40,55 @@
     height: 100vh;
 }
 
+.country-info {
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    z-index: 99;
+    bottom: 10%;
+    left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-info {
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    z-index: 99;
+    bottom: 10%;
+    left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#country-name {
+    color: transparent;
+    background: linear-gradient(to bottom, #fff, #709775);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: "Nunito-SemiBold";
+    color: #8FB996;
+    text-shadow: 2px 2px 4px #415D43;
+    font-size: 100px;
+}
+
+#arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #A1CCA5;
+    margin-bottom: 3%;
+    margin-left: -33%;
+}
+
 .legend {
     width: 100%;
     height: 25px;
@@ -51,7 +104,7 @@
 }
 
 .bar {
-    width: 50%;
+    width: 33%;
     height: 25%;
     min-height: 10px;
     background-image: linear-gradient(to right, #FF7A00, #02FFFF);
@@ -89,7 +142,7 @@
 }
 
 .numbers {
-    width: 50%;
+    width: 33%;
     color: white;
     font-family: "Nunito-Regular";
     display: flex;
@@ -137,7 +190,7 @@ export default {
         const vectorLayer = new VectorLayer({
             background: 'transparent',
             source: new VectorSource({
-                url: "/data/countries.geojson",
+                url: "https://new-data.greenglobe.pages.dev/data/countries.geojson",
                 format: new GeoJSON(),
             }),
             style: function (feature) {
@@ -218,11 +271,16 @@ export default {
             });
 
             const info = document.getElementById('info');
+            const country_name = document.getElementById('country-name');
+            const sustain_arrow = document.getElementById('arrow-down');
             if (feature) {
                 info.innerHTML = feature.get('ADMIN') || '&nbsp;';
-                countryName = feature.get('ADMIN')
+                country_name.innerHTML = feature.get('ADMIN') || '&nbsp;';
+                sustain_arrow.style.marginLeft = "0%";
             } else {
                 info.innerHTML = '&nbsp;';
+                country_name.innerHTML = '&nbsp;';
+                sustain_arrow.style.marginLeft = "0%";
             }
 
             if (feature !== highlight) {
@@ -243,9 +301,12 @@ export default {
             displayFeatureInfo(pixel);
         });
 
-        map.on('click', (evt) => {
-            this.countryName = countryName;
-            this.showCountryInfo = true;
+        map.on('click', function (evt) {
+            displayFeatureInfo(evt.pixel);
+            const sustain_arrow = document.getElementById('arrow-down');
+            const sustain_value = Math.floor(Math.random() * (33 + 33 + 1)) - 33;
+            var percent = `${sustain_value}%`
+            sustain_arrow.style.marginLeft = percent;
         });
     },
     methods: {
