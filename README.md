@@ -22,7 +22,7 @@
 ## Introduction
 Issues like climate change, resource depletion, environmental inequality, and CO2 emissions have not only permeated headlines but also the minds of individuals worldwide. Environmental anxiety, a grim reality faced by many, has left a significant portion of the population grappling with feelings of fear and depression due to concerns regarding global warming.<sup>1 2</sup>
 
-Katie Hayes, a Canadian lead author of a climate anxiety study, stated, "If we're not pairing climate change communications about the risks with the actions we can take, that can increase a lot of anxiety for people" <sup>3</sup>. In response, we created GreenGlobe, which acknowledges the current global reality of environmental sustainability. Our platform not only offers current information but also statistical predictions of a country's future sustainability, spanning up to 50 years into the future. This way, individuals can be informed of the overall state of sustainability in different geographical regions, providing them with information to plan and adapt to the changing world.
+Katie Hayes, a Canadian lead author of a climate anxiety study, stated, "If we're not pairing climate change communications about the risks with the actions we can take, that can increase a lot of anxiety for people." <sup>3</sup> In response, we created GreenGlobe, which acknowledges the current global reality of environmental sustainability. Our platform not only offers current information, but also offers statistical predictions of a country's future sustainability, spanning up to 50 years into the future. This way, individuals can be informed of the overall state of sustainability in different geographical regions, providing them with information to plan and adapt to the changing world.
 
 #### Sources
 > 1 [1 in 10 Americans face depression due to climate anxiety](https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety)
@@ -49,8 +49,8 @@ These sources for chosen for their comprehensiveness and credibility.
 * Web application displaying a dynamic map, colour-coded by each country's current overall sustainability
 * Predicted future sustainability up to 50 years in the future based on past historical data
 * AI-generated overviews of each country's state of sustainability
-* Blue-orange percentage scale to showcase data, accessible to those who are colourblind
-* All data displayed originating from credible sources
+* Blue-orange percentage scale that dynamically changes to showcase data, accessible to those who are colourblind
+* All data displayed originating from credible sources (i.e. the UN)
 
 ## Technologies
 * Vue framework for frontend
@@ -82,7 +82,7 @@ DevPost:
 ## Roadmap
 We'd like to continue working on our website, implementing features like a sliding bar for users to choose up to what year they'd like to predict a country to. 
 We'd like to also continue to improve to UI of the website, with features like a light-dark mode toggle.
-We believe that our website will be extremely useful in the real-world, and we hope that our predictions and information can help alleviate climate anxiety of individuals around the world.
+We believe that our website will be extremely useful in the real world, and we hope that our predictions and information can help alleviate the climate anxiety of individuals around the world.
 
 ---
 > Tithi's GitHub [@TITHI007](https://github.com/TITHI007)
