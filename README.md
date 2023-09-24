@@ -59,7 +59,7 @@ These sources for chosen for their comprehensiveness and credibility.
 * OpenAI API for text description of sustainability
 * SciPy, pandas, numpy libraries for data analysis
 * Google Colab
-* OpenLayers library for displaying a map and calculating the distance between the buyer and the seller
+* OpenLayers library for rendering the map
 * Figma for UI/UX design
 
 ###### Programming Languages Used: JavaScript, Python, HTML, CSS
