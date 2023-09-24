@@ -43,7 +43,7 @@ We used the following data sources:
 * [UN SDG Global Database](https://unstats.un.org/sdgs/dataportal)
 * [Natural Earth](https://www.datahub.io/core/geo-countries/r/0.html)
 
-These sources for chosen for their comprehensiveness and credibility.
+These sources were chosen for their comprehensiveness and credibility.
 
 ## Features
 * Web application displaying a dynamic map, colour-coded by each country's current overall sustainability
@@ -54,7 +54,7 @@ These sources for chosen for their comprehensiveness and credibility.
 
 ## Technologies
 * Vue framework for frontend
-* Cloudfare Workers and Pages
+* Cloudflare Workers and Pages
 * .Tech domain name
 * OpenAI API for text description of sustainability
 * SciPy, pandas, numpy libraries for data analysis
@@ -68,10 +68,10 @@ These sources for chosen for their comprehensiveness and credibility.
 Go to https://greenglobe.tech/
 
 ## UI Blueprint
-Our inital vision for the website can be found [here](https://www.figma.com/file/Xc9SPOaidGRyENDfSi9dNs/World-Map-(Community)?type=design&node-id=0%3A1&mode=design&t=OfuiMUamE9dCG8vA-1).
+Our initial vision for the website can be found [here](https://www.figma.com/file/Xc9SPOaidGRyENDfSi9dNs/World-Map-(Community)?type=design&node-id=0%3A1&mode=design&t=OfuiMUamE9dCG8vA-1).
 
 ## Links
-DevPost:
+DevPost: https://devpost.com/software/greenglobe-17u30a?ref_content=user-portfolio&ref_feature=in_progress
 
 ## Contributors
 * Tithi Patel: Data Analyst
@@ -80,8 +80,8 @@ DevPost:
 * Skylar Ji: Graphic and UI/UX Designer, Full Stack
 
 ## Roadmap
-We'd like to continue working on our website, implementing features like a sliding bar for users to choose up to what year they'd like to predict a country for.  
-We'd like to also continue to improve to UI of the website, with features like a light-dark mode toggle.
+We want to continue working on our website, implementing features like a sliding bar for users to choose up to what year they'd like to predict a country for.  
+We would also like to continue improving the website's UI, with features like a light-dark mode toggle.
 We believe that our website will be extremely useful in the real world, and we hope that our predictions and information can help alleviate the climate anxiety of individuals around the world.
 
 ---
