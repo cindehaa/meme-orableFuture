@@ -54,7 +54,7 @@ These sources for chosen for their comprehensiveness and credibility.
 
 ## Technologies
 * Vue framework for frontend
-* Cloudfare for hosting
+* Cloudfare Workers and Pages
 * .Tech domain name
 * OpenAI API for text description of sustainability
 * SciPy, pandas, numpy libraries for data analysis
