@@ -25,14 +25,17 @@ Issues like climate change, resource depletion, environmental inequality, and CO
 Katie Hayes, a Canadian lead author of a climate anxiety study, stated, "If we're not pairing climate change communications about the risks with the actions we can take, that can increase a lot of anxiety for people" <sup>3</sup>. In response, we created GreenGlobe, which acknowledges the current global reality of environmental sustainability. Our platform not only offers current information but also statistical predictions of a country's future sustainability, spanning up to 50 years into the future. This way, individuals can be informed of the overall state of sustainability in different geographical regions, providing them with information to plan and adapt to the changing world.
 
 #### Sources
-> 1 [1 in 10 Americans face depression due to climate anxiety](https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety) 
+> 1 [1 in 10 Americans face depression due to climate anxiety](https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety)
+
 > (link: https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety)
 
 > 2 [Almost half of young people fear having children due to environmental concerns](https://www.theguardian.com/environment/2021/sep/14/four-in-10-young-people-fear-having-children-due-to-climate-crisis
-) 
+)
+
 > (link: https://www.theguardian.com/environment/2021/sep/14/four-in-10-young-people-fear-having-children-due-to-climate-crisis)
 
-> 3 [Scientists across Canada are trying to learn enough about climate anxiety to prevent and treat it](https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101) 
+> 3 [Scientists across Canada are trying to learn enough about climate anxiety to prevent and treat it](https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101)
+
 > (link: https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101)
 
 ## Research
@@ -61,7 +64,7 @@ These sources for chosen for their comprehensiveness and credibility.
 ###### Programming Languages Used: JavaScript, Python, HTML, CSS
 
 ## How To Use
-Go to: 
+Go to [https://new-data.greenglobe.pages.dev/](https://new-data.greenglobe.pages.dev/)
 
 ## UI Blueprint
 Our inital vision for the website can be found [here](https://www.figma.com/file/Xc9SPOaidGRyENDfSi9dNs/World-Map-(Community)?type=design&node-id=0%3A1&mode=design&t=OfuiMUamE9dCG8vA-1).
