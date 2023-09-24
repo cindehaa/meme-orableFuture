@@ -40,7 +40,7 @@ We used the following data sources:
 * [UN SDG Global Database](https://unstats.un.org/sdgs/dataportal)
 * [Natural Earth](https://www.datahub.io/core/geo-countries/r/0.html)
 
-These sources for chosen for the comprehensiveness and credibility.
+These sources for chosen for their comprehensiveness and credibility.
 
 ## Features
 * Web application displaying a dynamic map, colour-coded by each country's current overall sustainability
