@@ -25,14 +25,14 @@ Issues like climate change, resource depletion, environmental inequality, and CO
 Katie Hayes, a Canadian lead author of a climate anxiety study, stated, "If we're not pairing climate change communications about the risks with the actions we can take, that can increase a lot of anxiety for people" <sup>3</sup>. In response, we created GreenGlobe, which acknowledges the current global reality of environmental sustainability. Our platform not only offers current information but also statistical predictions of a country's future sustainability, spanning up to 50 years into the future. This way, individuals can be informed of the overall state of sustainability in different geographical regions, providing them with information to plan and adapt to the changing world.
 
 #### Sources
-1 [1 in 10 Americans face depression due to climate anxiety](https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety) 
+> 1 [1 in 10 Americans face depression due to climate anxiety](https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety) 
 > (link: https://sustainability.yale.edu/explainers/yale-experts-explain-climate-anxiety)
 
-2 [Almost half of young people fear having children due to environmental concerns](https://www.theguardian.com/environment/2021/sep/14/four-in-10-young-people-fear-having-children-due-to-climate-crisis
+> 2 [Almost half of young people fear having children due to environmental concerns](https://www.theguardian.com/environment/2021/sep/14/four-in-10-young-people-fear-having-children-due-to-climate-crisis
 ) 
 > (link: https://www.theguardian.com/environment/2021/sep/14/four-in-10-young-people-fear-having-children-due-to-climate-crisis)
 
-3 [Scientists across Canada are trying to learn enough about climate anxiety to prevent and treat it](https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101) 
+> 3 [Scientists across Canada are trying to learn enough about climate anxiety to prevent and treat it](https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101) 
 > (link: https://www.cbc.ca/news/science/climate-anxiety-research-1.6547101)
 
 ## Research
@@ -82,6 +82,9 @@ We believe that our website will be extremely useful in the real-world, and we h
 
 ---
 > Tithi's GitHub [@TITHI007](https://github.com/TITHI007)
+
 > Julie's GitHub [@Jewels2001](https://github.com/Jewels2001)
+
 > Cindy's GitHub [@cindehaa](https://github.com/cindehaa)
+
 > Skylar's GitHub [@Skylarrji](https://github.com/Skylarrji) 
