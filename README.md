@@ -55,6 +55,7 @@ These sources for chosen for their comprehensiveness and credibility.
 ## Technologies
 * Vue framework for frontend
 * Cloudfare for hosting
+* .Tech domain name
 * OpenAI API for text description of sustainability
 * SciPy, pandas, numpy libraries for data analysis
 * Google Colab
@@ -74,7 +75,7 @@ DevPost:
 
 ## Contributors
 * Tithi Patel: Data Analyst
-* Julie Wojtiw-Quo: Data Analyst, Hosting, Deployment
+* Julie Wojtiw-Quo: Data Analyst, Deployment
 * Cindy Li: Full Stack
 * Skylar Ji: Graphic and UI/UX Designer, Full Stack
 
