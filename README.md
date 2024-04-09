@@ -5,7 +5,7 @@
 </h1>
 
 
-<h4 align="center">Searching for a Greener Future</h4>
+<h4 align="center">Searching for a Greener Future | ⭐ Winner of Best AI App Developed with Cloudflare Workers and/or Pages ⭐</h4>
 
 <p align="center">
   <a href="#introduction">Introduction</a> •
